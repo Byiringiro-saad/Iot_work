@@ -1,3 +1,7 @@
+<?php
+    include_once("./backend/backend.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +30,7 @@
             </ul>
         </div>
         <div class="data">
-            <p data-text="WELCOME TO IOT-SAAD" class="welcome">WELCOME TO IOT-SAAD</p>
+            <p data-text="WELCOME TO IOT-SAAD" class="welcome">WELCOME TO AA-IOT</p>
         </div>
     </div>
     <div class="back">

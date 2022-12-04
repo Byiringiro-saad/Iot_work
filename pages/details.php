@@ -1,3 +1,36 @@
+<?php
+    #read file content
+    $f=fopen('../backend/data.txt', "r");
+    $content="";
+    
+    while(!feof($f)){
+    $content.= fgets($f)."\n";
+    }
+
+    fclose($f);
+
+    #Parse the content to get line after line
+    foreach(explode("\n",$content) as $row):
+    if(!empty($row)){
+        $column = explode(" -- ",$row);
+        $timestamp=$column[0];
+        $device=$column[1];
+        $temperature = $column[2]." <sup>o</sup>C";
+        $humidity=$column[3];
+        $heat_index=$column[4];
+        print "<tr>";
+        print "<td>".$timestamp."</td>";
+        print "<td>".$device."</td>";
+        print "<td>".$temperature."</td>";
+        print "<td>".$humidity."</td>";
+        print "<td>".$heat_index."</td>";
+        print "</tr>";
+    }
+    endforeach;
+    print "</tbody>";
+    print "</table>";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
